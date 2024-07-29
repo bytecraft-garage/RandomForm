@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'admin.css' %}">
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Byte Craft Anonymous System</h1>
+    <div class="container">
+        <table border="0">
+            <tr>
+                <th colspan="2"><div class="headerdiv">
+                    Queries
+                </div></th>
+                <th></th>
+                
+            </tr>
+            {% for x in data %}
+            <tr>
+                <td><div class="centerdiv">{{x}} </div></td>
+                <td><a href="{% url 'delete' x.id %}"><button class="button-8" >Delete</button></a></td>
+                
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+</body>
+</html>
+
+<!-- HTML !-->
+
+

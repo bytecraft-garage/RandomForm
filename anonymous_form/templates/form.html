@@ -15,12 +15,11 @@
             
             <div class="text-section">
                 
-                <form method="post" enctype="multipart/form-data">
+                <form method="POST" enctype="multipart/form-data" >
                     {% csrf_token %}
                     <input type="text" name="text" placeholder="Write your queries here..!">
-                    <!-- <button type="submit">Submit</button> -->
-                    <!-- HTML !-->
-                    <button class="button-19" role="button">Submit</button>
+                   
+                    <button class="button-19" role="button" type="submit">Submit</button>
 
              </form>
             </div>
