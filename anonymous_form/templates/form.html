@@ -4,10 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anonymous Form</title>
+    <title>Form</title>
     <link rel="stylesheet" href="{% static 'form.css' %}">
 </head>
 <body>
-    
+    <div class="parent">
+        <div class="outer-container">
+            <h1>Anonymous Form</h1>
+            <hr style="color: black;">
+            
+            <div class="text-section">
+                
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="text" name="text" placeholder="Write your queries here..!">
+                    <!-- <button type="submit">Submit</button> -->
+                    <!-- HTML !-->
+                    <button class="button-19" role="button">Submit</button>
+
+             </form>
+            </div>
+            <div class="content-section">
+                <ul>
+                    <li>
+                        Feel free to share your thoughts openly without revealing your identity.</li>
+                        <li>
+                            This is a confidential space to express yourself freely.
+                        </li>
+                        <li>You can share your concerns anonymously here.</li>
+                        <li>
+                            Share your doubts openly without fear of disclosure.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
